@@ -7,7 +7,14 @@
     padding: 70px $padding-mobile;
     @media (min-width: $desktop-width) {
         background-size: cover;
-      }
+    }
+}
+.homepage__container {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        width: 1260px;
+        margin: 0 auto;
+    }
 }
 .homepage__title {
     color: $white;
@@ -19,6 +26,12 @@
     font-family: 'Neue soviet',sans-serif;
     width: 360px;
     margin: 0 auto;
+    @media (min-width: $desktop-width) {
+        font-size: 153px;
+        width: 670px;
+        text-align: left;
+        line-height: 139.982px;
+    }
 }
 .homepage__title span {
     color: $yellow;
@@ -26,7 +39,7 @@
 }
 .homepage__form {
     min-width: 360px;
-    max-width: 1260px;
+    max-width: 780px;
     margin: 0 auto;
     background: linear-gradient(0deg, rgba(51, 53, 66, 0.50) 0%,
     rgba(51, 53, 66, 0.50) 100%), 
@@ -37,6 +50,10 @@
     border: 1px solid $white;
     padding: 30px;
     backdrop-filter: blur(5.035763263702393px);
+    @media (min-width: $desktop-width) {
+        width: 520px;
+        margin: 0 0 0 auto;
+    }
 }
 .homepage__subtittle {
     color: $white;
@@ -46,6 +63,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+    }
 }
 .homepage__item #homepage__name,
 .homepage__item #homepage__number{
@@ -71,6 +91,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
 }
 ::placeholder{
     color: $white;
@@ -80,13 +103,68 @@
     font-style: normal;
     font-weight: 400;
     line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
 }
-#homepage__file {
+.homepage__label-file {
+    display: block;
     width: 100%;
-    height: 130px;
     margin: 0 auto 10px auto;
     border-radius: 10px;
     border: 1px dashed $white;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.homepage__label-file:hover {
+    opacity: 0.7;
+}
+.homepage__label-image {
+    margin-bottom: 10px;
+    @media (min-width: $desktop-width) {
+        width: 15px;
+        height: 24px;
+    }
+}
+#homepage__file {
+    display: none;
+}
+.homepage__label-clue {
+    color: $white;
+    text-align: center;
+    font-family: $Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
+}
+.homepage__label-hook {
+    color: #B8B8B8;
+    text-align: center;
+    font-family: $Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+    }
+}
+.homepage__label-button {
+    color: $blue;
+    text-align: center;
+    font-family: $Roboto;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
 }
 .homepage__promt {
     color: $white;
@@ -98,12 +176,16 @@
     line-height: 13.854px;
     text-decoration-line: underline;
     margin-bottom: 15px;
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        margin: 25px auto;
+    }
 }
 .homepage__button {
     display: block;
     width: 200px;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 10px;
     background: linear-gradient(92deg, #FD5F2F 0.29%, #FFB069 142.96%);
     box-shadow:0 0 10px #FD5F2F;
     padding: 9px 27px;
@@ -114,4 +196,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: 13.854px;
+    @media (min-width: $desktop-width) {
+        width: 290px;
+        font-size: 16px;
+        padding: 15px 27px;
+    }
+}
+.homepage__button:hover {
+    opacity: 0.8;
 }
