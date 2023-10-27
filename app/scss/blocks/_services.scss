@@ -41,10 +41,12 @@
     }
 }
 .services__subtitle::after {
+    @media (min-width: $desktop-width) {
     position: absolute;
     top: 242px;
     right:70px;
     content: url('../images/src/thumb-up.png');
+    }
 }
 .services__image {
     width: 340px;
