@@ -65,7 +65,7 @@
 }
 .advantages__number-item:nth-child(1)::after {
     content: '';
-    background-image: url('/app/images/src/builder.svg');
+    background-image: url('../images/src/builder.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -87,7 +87,7 @@
 }
 .advantages__number-item:nth-child(2)::after {
     content: '';
-    background-image: url('/app/images/src/timetable.svg');
+    background-image: url('../images/src/timetable.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -109,7 +109,7 @@
 }
 .advantages__number-item:nth-child(3)::after {
     content: '';
-    background-image: url('/app/images/src/meditation.svg');
+    background-image: url('../images/src/meditation.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -131,7 +131,7 @@
 }
 .advantages__number-item:nth-child(4)::after {
     content: '';
-    background-image: url('/app/images/src/money.svg');
+    background-image: url('../images/src/money.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -147,7 +147,7 @@
 }
 .advantages__number-item:nth-child(5)::after {
     content: '';
-    background-image: url('/app/images/src/foreman.svg');
+    background-image: url('../images/src/foreman.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
