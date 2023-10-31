@@ -48,11 +48,13 @@
     width: 340px;
     height: 320px;
     padding: 150px 32px;
+    border-radius: 5px;
     @media (min-width: $desktop-width) {
         font-size: 36px;
         width: 620px;
         height: 600px;
         padding: 285px 62px;
+        border-radius: 10px;
     }
 }
 .price__furniture {
@@ -83,11 +85,13 @@
     width: 340px;
     height: 320px;
     padding: 150px 32px;
+    border-radius: 5px;
     @media (min-width: $desktop-width) {
         font-size: 36px;
         width: 620px;
         height: 600px;
         padding: 276px 60px;
+        border-radius: 10px;
     }
 }
 .price__container {
@@ -128,36 +132,52 @@
 .modal-content-kitchen {
     position: relative;
     background-color: $white;
-    padding: 40px;
+    padding: 15px;
     width: 100%;
+    @media (min-width: $desktop-width) {
+        padding: 40px;
+    }
 }
+// .modal-content-kitchen::after {
+//     content: '';
+//     width: 15px;
+//     height: 15px;
+//     background-color: #000;
+//     top: 18px;
+//     left: 18px;
+//     position: fixed;
+// }
 .price__close-kitchen {
-    background-image: url('../images/src/close.png');
+    background-image: url('../images/src/close.svg');
     background-size: cover;
     background-color: $white;
     width: 20px;
     height: 20px;
     display: block;
     position: absolute;
-    top: 40px;
-    left: 37px;
+    top: 16px;
+    left: 17px;
     cursor: pointer;
     z-index: 2;
+    border-radius: 50px;
     @media (min-width: $desktop-width) {
         width: 40px;
         height: 40px;
         top: 40px;
-        left: 40px; 
+        left: 43px; 
     }
 }
 .modal-content-furniture {
     position: relative;
     background-color: $white;
-    padding: 40px;
+    padding: 15px;
     width: 100%;
+    @media (min-width: $desktop-width) {
+        padding: 40px;
+    }
 }
 .price__close-furniture {
-    background-image: url('../images/src/close.png');
+    background-image: url('../images/src/close.svg');
     background-size: cover;
     background-color: $white;
     width: 20px;
@@ -168,10 +188,11 @@
     right: 50px;
     cursor: pointer;
     z-index: 2;
+    border-radius: 50px;
     @media (min-width: $desktop-width) {
         width: 40px;
         height: 40px;
-        right: 90px;
+        right: 52px;
     }
 }
 iframe {
