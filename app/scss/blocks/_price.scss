@@ -1,0 +1,178 @@
+.price {
+    width: 340px;
+    margin: 0 auto;
+    @media (min-width: $desktop-width) {
+        width: 1260px;
+    }
+}
+.price__title {
+    color: $grey;
+    font-family: $Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80%;
+    width: 270px;
+    margin: 0 auto 20px auto;
+    @media (min-width: $desktop-width) {
+        font-size: 85px;
+        width: 925px;
+        margin: 0 auto 35px auto;
+    }
+}
+.price__kitchen {
+    background-image: url('../images/kitchen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 340px;
+    height: 320px;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 20px;
+     @media (min-width: $desktop-width) {
+        width: 620px;
+        height: 600px;
+        border-radius: 10px;
+        background-image: url('../images/kitchen-d.png');
+    }
+}
+.price__kitchen-title {
+    color: $white;
+    text-align: center;
+    font-family: $Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80%;
+    margin: auto;
+    width: 340px;
+    height: 320px;
+    padding: 150px 32px;
+    @media (min-width: $desktop-width) {
+        font-size: 36px;
+        width: 620px;
+        height: 600px;
+        padding: 285px 62px;
+    }
+}
+.price__furniture {
+    background-image: url('../images/furniture.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 340px;
+    height: 320px;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 20px;
+    @media (min-width: $desktop-width) {
+        width: 620px;
+        height: 600px;
+        border-radius: 10px;
+        background-image: url('../images/furniture-d.png');
+    }
+}
+.price__furniture-title {
+    color: $white;
+    text-align: center;
+    font-family: $Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80%;
+    margin: auto;
+    width: 340px;
+    height: 320px;
+    padding: 150px 32px;
+    @media (min-width: $desktop-width) {
+        font-size: 36px;
+        width: 620px;
+        height: 600px;
+        padding: 276px 60px;
+    }
+}
+.price__container {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        width: 1260px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}
+.price__kitchen-title:hover,
+.price__furniture-title:hover {
+   color: $yellow;
+   background: rgba(31, 32, 32, 0.212);
+}
+.price__wrapper-modal-kitchen {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $white;
+}
+.price__wrapper-modal-furniture {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $white;
+}
+.modal-content-kitchen {
+    position: relative;
+    background-color: $white;
+    padding: 40px;
+    width: 100%;
+}
+.price__close-kitchen {
+    background-image: url('/app/images/src/close.svg');
+    background-size: cover;
+    background-color: $white;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    cursor: pointer;
+    @media (min-width: $desktop-width) {
+        width: 40px;
+        height: 40px;
+        top: 40px;
+        left: 40px; 
+    }
+}
+.modal-content-furniture {
+    position: relative;
+    background-color: $white;
+    padding: 40px;
+    width: 100%;
+}
+.price__close-furniture {
+    background-image: url('/app/images/src/close.svg');
+    background-size: cover;
+    background-color: $white;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    cursor: pointer;
+    @media (min-width: $desktop-width) {
+        width: 40px;
+        height: 40px;
+    }
+}
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
