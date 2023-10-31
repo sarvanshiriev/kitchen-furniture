@@ -1,6 +1,6 @@
 .advantages {
     padding: 30px 0;
-    width: 375px;
+    width: 340px;
     margin: 0 auto;
     @media (min-width: $desktop-width) {
         width: 1260px;
@@ -15,7 +15,7 @@
     font-style: normal;
     font-weight: 900;
     line-height: 86.5%;
-    width: 330px;
+    width: 340px;
     margin: 0 auto 27px 0; 
     border-radius: 0px 22.038px 22.038px 22.038px;
     border: 1px solid $red;
@@ -35,14 +35,14 @@
     width: 1px;
     height: 359px;
     top: 53px;
-    left: 106px;
+    left: 85px;
     position: absolute;
     @media (min-width: $desktop-width) {
         content: url('../images/src/line-advantages-d.svg');
         width: 3px;
         height: 1372px;
         top:200px;
-        left: 403px;
+        left: 300px;
     }
 }
 .advantages__number-item {
@@ -179,11 +179,10 @@
 .advantages__wrapper {
     display: flex;
     margin: 0 auto 0 auto;
-    width: 350px;
+    width: 340px;
     justify-content: space-between;
     @media (min-width: $desktop-width) {
-        width: 1360px;
-        margin-left: 45px;
+        width: 1260px;
     }
 }
 .advantages__number-list {
