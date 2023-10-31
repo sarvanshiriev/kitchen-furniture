@@ -36,4 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
         modalContentFurniture.src = "";
         document.body.style.overflow = 'auto'; 
     });
+
+    function closeModalsOnEsc(event) {
+        if (event.key === "Escape") {
+            modalKitchen.style.display = "none";
+            modalContentKitchen.src = "";
+            modalFurniture.style.display = "none";
+            modalContentFurniture.src = "";
+            document.body.style.overflow = 'auto'; 
+        }
+    }
+
+    document.addEventListener("keydown", closeModalsOnEsc);
 });
