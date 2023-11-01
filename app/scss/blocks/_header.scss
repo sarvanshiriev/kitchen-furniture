@@ -10,7 +10,7 @@
     margin: 0 auto;
     display: flex;
     position: relative;
-    max-width: 1040px;
+    max-width: 800px;
     @media (min-width: $desktop-width) { 
         padding: 10px $padding-desktop;
         max-width: 1440px;
@@ -139,7 +139,7 @@
 }
 .header__burger-list--opened{
     position: absolute;
-    right: 0;
+    right: 10px;
     top:50px;
     background-color: $grey;
     border-radius: 10px;

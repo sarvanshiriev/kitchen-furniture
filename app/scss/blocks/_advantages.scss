@@ -1,9 +1,10 @@
 .advantages {
-    padding: 30px 0;
-    width: 340px;
+    padding: 30px $padding-mobile;
+    min-width: 340px;
+    max-width: 800px;
     margin: 0 auto;
     @media (min-width: $desktop-width) {
-        width: 1260px;
+        max-width: 1260px;
         padding: 90px 0;
     }
 }
@@ -15,26 +16,27 @@
     font-style: normal;
     font-weight: 900;
     line-height: 86.5%;
-    width: 340px;
+    min-width: 340px;
+    max-width: 780px;
     margin: 0 auto 27px 0; 
     border-radius: 0px 22.038px 22.038px 22.038px;
     border: 1px solid $red;
     padding: 9px 18px;
     position: relative;
     @media (min-width: $desktop-width) {
-        width: 1260px;
+        max-width: 1260px;
         font-size: 77.852px;
         border-radius: 0px 84.263px 84.263px 84.263px;
         border: 3.823px solid $red;
         padding: 33px 18px;
-        margin: 0 auto 90px 0; 
+        margin: 0 auto 70px 0; 
     }
 }
 .advantages__title::after {
     content: url('../images/src/line-advantages.svg');
     width: 1px;
     height: 359px;
-    top: 53px;
+    top: 100%;
     left: 85px;
     position: absolute;
     @media (min-width: $desktop-width) {
@@ -45,7 +47,7 @@
         left: 300px;
     }
 }
-.advantages__number-item {
+.advantages__item-number {
     color: $grey;
     font-family: $Bebas;
     font-size: 40.723px;
@@ -53,17 +55,14 @@
     font-weight: 700;
     line-height: 100%;
     position: relative;
+    margin-right: 90px;
     @media (min-width: $desktop-width) {
         font-size: 155.704px;
+        margin-right: 280px;
     }
 }
-.advantages__number-item:nth-child(1) {
-    margin-bottom: 28px;
-    @media (min-width: $desktop-width) {
-        margin-bottom: 90px; 
-    }
-}
-.advantages__number-item:nth-child(1)::after {
+
+.advantages__item:nth-child(1)::after {
     content: '';
     background-image: url('../images/src/builder.svg');
     background-size: contain;
@@ -79,13 +78,8 @@
         left: 145px;
     }
 }
-.advantages__number-item:nth-child(2) {
-    margin-bottom: 26px;
-    @media (min-width: $desktop-width) {
-        margin-bottom: 125px; 
-    }
-}
-.advantages__number-item:nth-child(2)::after {
+
+.advantages__item:nth-child(2)::after {
     content: '';
     background-image: url('../images/src/timetable.svg');
     background-size: contain;
@@ -97,17 +91,12 @@
     @media (min-width: $desktop-width) {
         width: 145px;
         height: 145px;
-        top: -7px;
+        top: 15px;
         left: 145px;
     }
 }
-.advantages__number-item:nth-child(3) {
-    margin-bottom: 34px;
-    @media (min-width: $desktop-width) {
-        margin-bottom: 120px; 
-    }
-}
-.advantages__number-item:nth-child(3)::after {
+
+.advantages__item:nth-child(3)::after {
     content: '';
     background-image: url('../images/src/meditation.svg');
     background-size: contain;
@@ -123,13 +112,8 @@
         left: 145px;
     }
 }
-.advantages__number-item:nth-child(4) {
-    margin-bottom: 35px;
-    @media (min-width: $desktop-width) {
-        margin-bottom: 150px; 
-    }
-}
-.advantages__number-item:nth-child(4)::after {
+
+.advantages__item:nth-child(4)::after {
     content: '';
     background-image: url('../images/src/money.svg');
     background-size: contain;
@@ -141,11 +125,11 @@
     @media (min-width: $desktop-width) {
         width: 145px;
         height: 145px;
-        top: -7px;
+        top: 30px;
         left: 145px;
     }
 }
-.advantages__number-item:nth-child(5)::after {
+.advantages__item:nth-child(5)::after {
     content: '';
     background-image: url('../images/src/foreman.svg');
     background-size: contain;
@@ -157,34 +141,39 @@
     @media (min-width: $desktop-width) {
         width: 145px;
         height: 145px;
-        top: -7px;
+        top: 15px;
         left: 145px;
     }
 }
-.advantages__item {
+.advantages__item-text {
     color: $grey;
     font-family: $Blogger;
     font-size: 10px;
     font-style: normal;
     font-weight: 300;
     line-height: 100%;
-    width: 242px;
-    margin-bottom: 25px;
+    min-width: 242px;
     @media (min-width: $desktop-width) {
         font-size: 38.235px;
         width: 925px;
-        margin-bottom: 100px;
+    }
+}
+.advantages__item {
+    margin-bottom: 25px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    @media (min-width: $desktop-width) {
+        margin-bottom: 90px;
     }
 }
 .advantages__wrapper {
     display: flex;
     margin: 0 auto 0 auto;
-    width: 340px;
-    justify-content: space-between;
+    min-width: 340px;
+    max-width: 780px;
+    padding-right: 10px;
     @media (min-width: $desktop-width) {
-        width: 1260px;
+        max-width: 1260px;
     }
-}
-.advantages__number-list {
-    margin-top: -3px;
 }

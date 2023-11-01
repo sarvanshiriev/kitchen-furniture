@@ -1,8 +1,11 @@
 .price {
-    width: 340px;
+    min-width: 340px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 0 $padding-mobile;
     @media (min-width: $desktop-width) {
-        width: 1260px;
+        max-width: 1260px;
+        padding: 0;
     }
 }
 .price__title {
@@ -24,11 +27,13 @@
     background-image: url('../images/kitchen.png');
     background-repeat: no-repeat;
     background-position: center;
-    width: 340px;
+    min-width: 340px;
+    max-width: 780px;
     height: 320px;
     border-radius: 5px;
     display: flex;
     margin-bottom: 20px;
+    background-color: #4e6b95;
      @media (min-width: $desktop-width) {
         width: 620px;
         height: 600px;
@@ -61,11 +66,13 @@
     background-image: url('../images/furniture.png');
     background-repeat: no-repeat;
     background-position: center;
-    width: 340px;
-    height: 320px;
+    min-width: 340px;
+    max-width: 780px;
+    height: 340px;
     border-radius: 5px;
     display: flex;
     margin-bottom: 20px;
+    background-color: #705858;
     @media (min-width: $desktop-width) {
         width: 620px;
         height: 600px;
@@ -105,7 +112,6 @@
 .price__kitchen-title:hover,
 .price__furniture-title:hover {
    color: $yellow;
-   background: rgba(31, 32, 32, 0.212);
 }
 .price__wrapper-modal-kitchen {
     display: none;
