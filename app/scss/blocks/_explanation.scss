@@ -44,13 +44,15 @@
 }
 .explanation__item {
     width: 65px;
+    height: 65px;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 2px;
     position: absolute;
     @media (min-width: $desktop-width) {
         width: 150px;
-        border-radius: 10px;
+        height: 150px;
+        border-radius: 5px;
         padding: 5px;
     }
 }
@@ -67,31 +69,34 @@
     left: 45%;
 }
 .explanation__item:nth-child(4) {
-    top: 30%;
+    top: 25%;
     left: 55%;
+    z-index: 5;
 }
 .explanation__item:nth-child(5) {
-    top: 40%;
-    left: 50%;
+    top: 30%;
+    left: 35%;
+    z-index: 4;
 }
 .explanation__item:nth-child(6) {
-    top: 45%;
+    top: 40%;
     left: 40%;
+    z-index: 3;
 }
 .explanation__item:nth-child(7) {
     top: 60%;
     left: 60%;
 }
 .explanation__item:nth-child(8) {
-    top: 75%;
+    top: 65%;
     left: 40%;
 }
 .explanation__item:nth-child(9) {
-    top: 20%;
-    right: 5%;
+    top: 10%;
+    right: 3%;
 }
 .explanation__item:nth-child(10) {
-    top: 45%;
+    top: 35%;
     right: 10%;
 }
 .explanation__item-text {
@@ -112,13 +117,13 @@
 }
 .explanation__item-image {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 .explanation__item-element {
-    left: -7px;
-    bottom: -7px;
-    width: 7px;
-    height: 7px;
+    left: -10px;
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
     border-radius: 10px;
     position: absolute;
     background-color: $yellow;
@@ -210,6 +215,7 @@
         width: 22px;
         height: 22px;
         left: -30px;
+        top:-5px;
     }
 }
 .homepage__checkbox {
@@ -231,7 +237,7 @@
         height: 16px;
         border-radius: 16px;
         left: -27px;
-        top: -1px;
+        top: -2px;
     }
 }
 .explanation__container form {
