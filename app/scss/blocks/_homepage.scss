@@ -107,6 +107,22 @@
         font-size: 16px;
     }
 }
+:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+  :focus::-moz-placeholder {
+    color: transparent
+  }
+  
+  :focus:-moz-placeholder {
+    color: transparent
+  }
+  
+  :focus:-ms-input-placeholder {
+    color: transparent
+  }
+
 .homepage__label-file {
     display: block;
     width: 100%;
