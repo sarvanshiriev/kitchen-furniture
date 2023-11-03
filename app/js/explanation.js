@@ -33,3 +33,25 @@ itemElements.forEach((button, index) => {
         explanationItems[index].style.backgroundColor = '#FFCC48';
     });
 });
+
+
+const buttonOpen = document.querySelector('.explanation__button-open');
+const form = document.querySelector('.homepage__form-wrapper');
+
+let formVisible = false; // Переменная для отслеживания состояния видимости формы
+
+buttonOpen.addEventListener('click', function() {
+    if (!formVisible) {
+        event.preventDefault();
+        form.style.display = 'block';
+        buttonOpen.style.transform = "rotate(180deg)";
+        formVisible = true;
+    } else {
+        event.preventDefault();
+        form.style.display = 'none'; // Меняем обратно на "display: none;"
+        buttonOpen.style.transform = "rotate(0deg)"; // Возвращаем начальное положение кнопки
+        formVisible = false;
+    }
+});
+
+  

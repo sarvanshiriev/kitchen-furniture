@@ -65,7 +65,7 @@
     left: 15%;
 }
 .explanation__item:nth-child(3) {
-    top: 10%;
+    top: 5%;
     left: 45%;
 }
 .explanation__item:nth-child(4) {
@@ -92,12 +92,12 @@
     left: 40%;
 }
 .explanation__item:nth-child(9) {
-    top: 10%;
-    right: 3%;
+    top: 20%;
+    right: 0%;
 }
 .explanation__item:nth-child(10) {
     top: 35%;
-    right: 10%;
+    right: 15%;
 }
 .explanation__item-text {
     color: $grey;
@@ -147,12 +147,12 @@
 }
 @keyframes blinker {
     from { opacity: 1.0; }
-    to { opacity: 0.0; }
+    to { opacity: 0.5; }
   }
    
   @-webkit-keyframes blinker {
     from { opacity: 1.0; }
-    to { opacity: 0.0; }
+    to { opacity: 0.5; }
   }
 .explanation__item-container {
     display: none;
@@ -210,12 +210,12 @@
     border: 1px solid $white;
     border-radius: 5px;
     left: -20px;
-    top: 0px;
+    top: -1px;
     @media (min-width: $desktop-width) {
         width: 22px;
         height: 22px;
         left: -30px;
-        top:-5px;
+        top:-1px;
     }
 }
 .homepage__checkbox {
@@ -230,23 +230,52 @@
     height: 10px;
     border-radius: 10px;
     left: -18px;
-    top: 2px;
+    top: 1px;
     background-color: $white;
     @media (min-width: $desktop-width) {
         width: 16px;
         height: 16px;
         border-radius: 16px;
         left: -27px;
-        top: -2px;
+        top: 2px;
     }
 }
 .explanation__container form {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
     @media (min-width: $desktop-width) {
     position: absolute;
     right: 35px;
     top: 225px;
     }
 }
+.explanation__button-open {
+    display: none;
+    @media (min-width: $desktop-width) {
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-image: url('../images/src/arrow.svg');
+    background-size: cover;
+    background-position: center;
+    bottom: 10px;
+    right: 250px;
+    }
+}
+.explanation__button-open:hover {
+    opacity: 0.7;
+}
+.homepage__form-wrapper {
+    @media (min-width: $desktop-width) {
+    display: none;
+    }
+}
+
 .homepage__checkbox-label:hover {
     opacity: 0.7;
+}
+.button-explanation {
+    cursor: pointer;
+    text-align: center;
 }
