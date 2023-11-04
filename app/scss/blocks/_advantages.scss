@@ -33,14 +33,14 @@
     }
 }
 .advantages__title::after {
-    content: url('../images/src/line-advantages.svg');
+    content: url('../images/src/advantages/line-advantages.svg');
     width: 1px;
     height: 359px;
     top: 100%;
     left: 85px;
     position: absolute;
     @media (min-width: $desktop-width) {
-        content: url('../images/src/line-advantages-d.svg');
+        content: url('../images/src/advantages/line-advantages-d.svg');
         width: 3px;
         height: 1372px;
         top:200px;
@@ -64,7 +64,7 @@
 
 .advantages__item:nth-child(1)::after {
     content: '';
-    background-image: url('../images/src/builder.svg');
+    background-image: url('../images/src/advantages/builder.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -81,7 +81,7 @@
 
 .advantages__item:nth-child(2)::after {
     content: '';
-    background-image: url('../images/src/timetable.svg');
+    background-image: url('../images/src/advantages/timetable.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -98,7 +98,7 @@
 
 .advantages__item:nth-child(3)::after {
     content: '';
-    background-image: url('../images/src/meditation.svg');
+    background-image: url('../images/src/advantages/meditation.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -115,7 +115,7 @@
 
 .advantages__item:nth-child(4)::after {
     content: '';
-    background-image: url('../images/src/money.svg');
+    background-image: url('../images/src/advantages/money.svg');
     background-size: contain;
     width: 38px;
     height: 38px;
@@ -131,7 +131,7 @@
 }
 .advantages__item:nth-child(5)::after {
     content: '';
-    background-image: url('../images/src/foreman.svg');
+    background-image: url('../images/src/advantages/foreman.svg');
     background-size: contain;
     width: 38px;
     height: 38px;

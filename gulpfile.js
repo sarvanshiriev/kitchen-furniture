@@ -6,12 +6,12 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean')
-const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
-const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include');
+const webpack = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 function pages () {
     return src('app/pages/*.html')
@@ -31,30 +31,7 @@ function fonts () {
   .pipe(ttf2woff2())
   .pipe(dest('app/fonts'))
 }
-
-function images() {
-    return src(['app/images/src/*.*','!app/images/src/*.svg'])
-    .pipe(newer('app/images'))
-    .pipe(imagemin())
-    .pipe(dest('app/images'))
-}
-
-function svgImages() {
-    return src('app/images/src/*.svg')
-        .pipe(newer('app/images')) 
-        .pipe(imagemin()) 
-        .pipe(dest('app/images')); 
-}
    
-function scripts () {
-    return src([
-        'app/js/main.js'
-    ])
-      .pipe(concat('main.min.js'))
-      .pipe(uglify())
-      .pipe(dest('app/js'))
-      .pipe(browserSync.stream())
-}
  
 function styles() {
     return src('app/scss/style.scss')
@@ -72,10 +49,11 @@ function watching () {
         }
     });
     watch(['app/scss/**/*.scss'],styles)
-    watch(['app/images/src'],images)
-    watch(['app/js/main.js'],scripts)
-    watch(['app/components/*','app/pages/*'],pages)
-    watch(['app/*.html']).on('change',browserSync.reload);
+    watch(['app/js/main.js'],bundleJS)
+    watch(['app/components/*', 'app/pages/*'], pages)
+    .on('change', browserSync.reload);
+    watch('app/*.html')
+    .on('change', browserSync.reload);
 }
 
 function cleanDist () {
@@ -90,20 +68,21 @@ function building() {
         '!app/images/stack',
         'app/images/sprite.svg',
         'app/fonts/*.*',
-        'app/js/main.min.js',
         'app/**/*.html'
     ],{base:'app'})
     .pipe(dest('dist'))
 }
+function bundleJS() {
+    return src('app/js/**/*.js')
+      .pipe(webpack(webpackConfig))
+      .pipe(dest('app/js'));
+}
 
 exports.styles = styles;
-exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.building = building;
-exports.svgImages = svgImages;
-exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist,building);
-exports.default = parallel(styles,images,scripts,pages,watching,svgImages);
+exports.default = parallel(styles,pages,watching,bundleJS);

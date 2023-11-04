@@ -24,7 +24,7 @@
     }
 }
 .price__kitchen {
-    background-image: url('../images/kitchen.png');
+    background-image: url('../images/src/price/kitchen.png');
     background-repeat: no-repeat;
     background-position: center;
     min-width: 340px;
@@ -38,7 +38,7 @@
         width: 620px;
         height: 600px;
         border-radius: 10px;
-        background-image: url('../images/kitchen-d.png');
+        background-image: url('../images/src/price/kitchen-d.png');
     }
 }
 .price__kitchen-title {
@@ -63,7 +63,7 @@
     }
 }
 .price__furniture {
-    background-image: url('../images/furniture.png');
+    background-image: url('../images/src/price/furniture.png');
     background-repeat: no-repeat;
     background-position: center;
     min-width: 340px;
@@ -77,7 +77,7 @@
         width: 620px;
         height: 600px;
         border-radius: 10px;
-        background-image: url('../images/furniture-d.png');
+        background-image: url('../images/src/price/furniture-d.png');
     }
 }
 .price__furniture-title {
@@ -145,7 +145,7 @@
     }
 }
 .price__close-kitchen {
-    background-image: url('../images/src/close.svg');
+    background-image: url('../images/src/price/close.svg');
     background-size: cover;
     background-color: $white;
     width: 20px;
@@ -174,7 +174,7 @@
     }
 }
 .price__close-furniture {
-    background-image: url('../images/src/close.svg');
+    background-image: url('../images/src/price/close.svg');
     background-size: cover;
     background-color: $white;
     width: 20px;
