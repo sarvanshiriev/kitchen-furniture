@@ -7,7 +7,7 @@
     margin: 0 auto;
     padding: 0 30px;
     @media (min-width: $desktop-width) {
-        max-width: 1260px;
+        max-width: 1210px;
     }
 }
 .faq__title {
@@ -29,15 +29,19 @@
     font-family: $Raleway;
     font-size: 10px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 80%;
+    font-weight: 700;
+    line-height: 100%;
     position: relative;
     margin-bottom: 15px;
+    cursor: pointer;
     @media (min-width: $desktop-width) {
         font-size: 35px;
         width: 535px;
         margin-bottom: 35px;
     }
+}
+.faq__item:hover {
+    opacity: 0.7;
 }
 .faq__item::after {
     content: '';
@@ -53,8 +57,11 @@
         width: 45px;
         height: 45px;
         right: -65px;
-        top: -8px;
+        top: 5px;
     }
+}
+.faq__item.open::after {
+    background-image: url('../images/src/faq/minus.svg');
 }
 .faq__wrapper {
     display: flex;
@@ -65,5 +72,21 @@
     }
 }
 .faq__list-one {
-    margin: 0 50px 0 -30px;
+    margin: 0 40px 0 -25px;
+    @media (min-width: $desktop-width) {
+        margin: 0 50px 0 -40px;
+    }
+}
+.faq__item-answer {
+    margin-top: 10px;
+    font-size: 8px;
+    font-weight: 300;
+    line-height: 85%;
+    display: none;
+    overflow: hidden;
+    transition: opacity 1s, max-height 1s;
+    @media (min-width: $desktop-width) {
+        font-size: 22px;
+        margin-top: 20px;
+    }
 }
