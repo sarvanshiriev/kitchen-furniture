@@ -50,6 +50,9 @@ function checkWindowSize() {
     if (window.innerWidth <= 1440) {
         form.style.display = 'block';
     }
+    else {
+        form.style.display = 'none';
+    }
 }
 
 window.addEventListener('load', checkWindowSize);
