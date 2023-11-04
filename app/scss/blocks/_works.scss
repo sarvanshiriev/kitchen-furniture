@@ -12,6 +12,7 @@
     margin: 40px auto 20px auto;
     @media (min-width: $desktop-width) { 
         font-size: 85px;
+        margin: 40px auto;
     }
 }
 .works__container {
@@ -48,6 +49,10 @@
 .works__item:nth-child(21) img{
     max-width: 112px;
     max-height: 84px;
+    @media (min-width: $desktop-width) { 
+        max-width: 377px;
+        max-height: 284px;
+    }
 }
 .works__item:nth-child(1) img,
 .works__item:nth-child(2) img,
@@ -61,6 +66,10 @@
 .works__item:nth-child(19) img{
     max-width: 84px;
     max-height: 84px;
+    @media (min-width: $desktop-width) { 
+        max-width: 284px;
+        max-height: 284px;
+    }
 }
 .works__modal {
     display: none;
