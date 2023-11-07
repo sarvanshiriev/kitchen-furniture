@@ -43,30 +43,33 @@
     }
 }
 .explanation__item {
-    width: 65px;
-    height: 65px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 2px;
     position: absolute;
     @media (min-width: $desktop-width) {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         border-radius: 5px;
         padding: 5px;
     }
 }
 .explanation__item:nth-child(1) {
-    top: 10%;
-    left: 10%;
+    top: 0%;
+    left: 5%;
+    z-index: 1;
 }
 .explanation__item:nth-child(2) {
-    top: 40%;
+    top: 20%;
     left: 15%;
+    z-index: 2;
 }
 .explanation__item:nth-child(3) {
-    top: 5%;
-    left: 45%;
+    top: 0%;
+    left: 35%;
+    z-index: 6;
 }
 .explanation__item:nth-child(4) {
     top: 25%;
@@ -84,34 +87,45 @@
     z-index: 3;
 }
 .explanation__item:nth-child(7) {
-    top: 60%;
+    bottom: 5%;
     left: 60%;
+    z-index: 2;
 }
 .explanation__item:nth-child(8) {
-    top: 65%;
+    bottom: 5%;
     left: 40%;
+    z-index: 1;
 }
 .explanation__item:nth-child(9) {
     top: 20%;
     right: 0%;
+    z-index: 9;
+    @media (min-width: $desktop-width) {
+        right: 10%;
+    }
 }
 .explanation__item:nth-child(10) {
-    top: 35%;
-    right: 15%;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+    @media (min-width: $desktop-width) {
+        top: 20%;
+    }
 }
+
 .explanation__item-text {
     color: $grey;
     text-align: center;
     font-family: $Raleway;
-    font-size: 5px;
+    font-size: 6px;
     font-style: normal;
     font-weight: 700;
     line-height: 80%;
     margin: 0 auto 3px auto;
-    width: 60px;
+    width: 80px;
     @media (min-width: $desktop-width) {
-        width: 130px;
-        font-size: 10px;
+        width: 200px;
+        font-size: 16px;
         margin-bottom: 5px;
     }
 }
@@ -128,15 +142,6 @@
     position: absolute;
     background-color: $yellow;
     content: '';
-    border: 1px solid $white;
-    animation-name: blinker;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-    animation-duration: 1s;
-    -webkit-animation-name: blinker;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-    -webkit-animation-duration: 1s;
     cursor: pointer;
     @media (min-width: $desktop-width) {
         width: 15px;
@@ -145,15 +150,63 @@
         bottom: -15px;
     }
 }
-@keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.5; }
+.explanation__item-element::before {
+    content: '';
+    position: absolute;
+    border: 2px solid $white; // Ширину обводки можете выбрать сами
+    left: -0px;
+    opacity: 0;
+    right: -0px;
+    top: -0px;
+    bottom: -0px;
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
   }
-   
-  @-webkit-keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.5; }
+  .explanation__item-element::after,
+  .explanation__item-element::before {
+    content: '';
+    position: absolute;
+    border: 2px solid $white;
+    left: -5px;
+    opacity: 0;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
   }
+  
+  .explanation__item-element::after {
+    animation-delay: 1.25s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
 .explanation__item-container {
     display: none;
 }
