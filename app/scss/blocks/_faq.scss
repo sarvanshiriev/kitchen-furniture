@@ -56,9 +56,7 @@
         top: 5px;
     }
 }
-.faq__item.open::after {
-    background-image: url('../images/src/faq/Minus.svg');
-}
+
 .faq__wrapper {
     display: flex;
     max-width: 780px;
