@@ -20,5 +20,17 @@
     <!--=include footer.html-->
     <script src="app/js/script.min.js"></script>
     <script src="https://res.smartwidgets.ru/app.js" defer></script>
+    <script>
+        function addDefaultValue(input) {
+    if (input.value === '') {
+    input.value = '+7';
+     }
+    }
+        function removeDefaultValue(input) {
+    if (input.value === '+7') {
+    input.value = '';
+     }
+    }
+    </script>
 </body>
 </html>
