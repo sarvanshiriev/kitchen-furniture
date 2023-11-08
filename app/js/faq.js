@@ -11,11 +11,11 @@ faqItems.forEach((item, index) => {
         if (!isAnswerVisible) {
             answer.style.display = 'block';
             item.classList.add('open');
-            faqImages[index].setAttribute('src', 'app/images/src/Minus.svg');
+            faqImages[index].setAttribute('src', 'app/images/src/faq/Minus.svg');
         } else {
             answer.style.display = 'none';
             item.classList.remove('open');
-            faqImages[index].setAttribute('src', 'app/images/src/Plus.svg');
+            faqImages[index].setAttribute('src', 'app/images/src/faq/Plus.svg');
         }
     });
 
@@ -26,11 +26,11 @@ faqItems.forEach((item, index) => {
         if (!isAnswerVisible) {
             answer.style.display = 'block';
             item.classList.add('open');
-            faqImages[index].setAttribute('src', 'app/images/src/Minus.svg');
+            faqImages[index].setAttribute('src', 'app/images/src/faq/Minus.svg');
         } else {
             answer.style.display = 'none';
             item.classList.remove('open');
-            faqImages[index].setAttribute('src', 'app/images/src/Plus.svg');
+            faqImages[index].setAttribute('src', 'app/images/src/faq/Plus.svg');
         }
     });
 });
