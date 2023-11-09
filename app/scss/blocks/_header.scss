@@ -16,18 +16,6 @@
         max-width: 1440px;
     }
 }
-.header__image-link {
-    margin-right: 10px;
-}
-.header__image {
-    width: 40px;
-    height: 40px;
-    @media (min-width: $desktop-width) { 
-        width: 80px;
-        height: 80px;
-        margin-right: 90px;
-    }
-}
 .header__navigation-list {
     display: flex;
     justify-content: space-between;
@@ -42,7 +30,7 @@
     min-width: 260px;
     @media (min-width: $desktop-width) {
         width: 620px;
-        margin: 0 40px 0 auto;
+        margin: 0 70px 0 auto;
     }
 }
 .header__navigation-link {
@@ -139,7 +127,7 @@
 .header__burger-list--opened{
     position: absolute;
     right: 10px;
-    top:50px;
+    top:28px;
     background-color: $grey;
     border-radius: 10px;
     padding: 20px;

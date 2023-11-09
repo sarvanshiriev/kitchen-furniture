@@ -43,12 +43,30 @@
     }
 }
 .explanation__item {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     border-radius: 3px;
     padding: 2px;
     position: absolute;
+    display: flex;
+    align-items: center;
+    @media (min-width: 400px) {
+        width: 80px;
+        height: 80px;
+    }
+    @media (min-width: 600px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (min-width: 800px) {
+        width: 120px;
+        height: 120px;
+    }
+    @media (min-width: 1000px) {
+        width: 150px;
+        height: 150px;
+    }
     @media (min-width: $desktop-width) {
         width: 250px;
         height: 250px;
@@ -66,14 +84,27 @@
     left: 5%;
     z-index: 2;
     @media (min-width: $desktop-width) {
-        top: 30%;
+        top: 60%;
         left: 10%;
     }
 }
 .explanation__item:nth-child(2) .explanation__item-element {
-        bottom: 100px;
+        bottom: 60px;
+        @media (min-width: 400px) {
+            bottom: 80px;
+        }
+        @media (min-width: 600px) {
+            bottom: 100px;
+        }
+        @media (min-width: 800px) {
+            bottom: 120px;
+        }
+        @media (min-width: 1000px) {
+            bottom: 150px;
+        }
     @media (min-width: $desktop-width) {
-        left: 250px;
+        left: -15px;
+        bottom: 250px;
     }
 }
 .explanation__item:nth-child(3) {
@@ -99,55 +130,109 @@
 }
 .explanation__item:nth-child(5) {
     top: 20%;
-    left: 15%;
+    left: 10%;
     z-index: 4;
+    @media (min-width: $desktop-width) {
+        top: 50%;
+        left: 15%;
+    }
 }
 .explanation__item:nth-child(5) .explanation__item-element {
+        left: 60px;
+    @media (min-width: 400px) {
+        left: 80px;
+    }
+    @media (min-width: 600px) {
+        left: 100px;
+    }
+    @media (min-width: 800px) {
+        left: 120px;
+    }
+    @media (min-width: 1000px) {
+        left: 150px;
+    }
     @media (min-width: $desktop-width) {
         left: 250px;
-    }
-}
-.explanation__item:nth-child(6) {
-    top: 25%;
-    left: 40%;
-    z-index: 3;
-    @media (min-width: $desktop-width) {
-        top: 57%;
-    }
-}
-.explanation__item:nth-child(6) .explanation__item-element {
-    @media (min-width: $desktop-width) {
         bottom: 250px;
     }
 }
+.explanation__item:nth-child(6) {
+    top: 55%;
+    left: 40%;
+    z-index: 3;
+    @media (min-width: 600px) {
+        top: 60%;
+    }
+    @media (min-width: $desktop-width) {
+        top: 57%;
+        left: 20%;
+    }
+}
+.explanation__item:nth-child(6) .explanation__item-element {
+    bottom: 60px;
+    @media (min-width: 400px) {
+        bottom: 80px;
+    }
+    @media (min-width: 600px) {
+        bottom: 100px;
+    }
+    @media (min-width: 800px) {
+        bottom: 120px;
+    }
+    @media (min-width: 1000px) {
+        bottom: 150px;
+    }
+    @media (min-width: $desktop-width) {
+        bottom: 250px;
+        left: 250px;
+    }
+}
 .explanation__item:nth-child(7) {
-    bottom: 6%;
+    bottom: 10%;
     left: 65%;
     z-index: 2;
+    @media (min-width: $desktop-width) {
+        bottom: 17%;
+    }
 }
 .explanation__item:nth-child(7) .explanation__item-element {
-    bottom: 21px;
-    left: -15px;
+    bottom: 0px;
+    left: -10px;
     @media (min-width: $desktop-width) {
-        bottom: -10px;
-        left: -10px;
+        bottom: -15px;
+        left: -15px;
     }
 }
 .explanation__item:nth-child(8) {
-    bottom: 5%;
-    left: 10%;
+    bottom: 10%;
+    left: 20%;
     z-index: 1;
+    @media (min-width: 1000px) {
+        left: 15%;
+    }
     @media (min-width: $desktop-width) {
-        bottom: 12%;
+        bottom: 15%;
         left: 42%;
     }
 }
 .explanation__item:nth-child(8) .explanation__item-element {
-    bottom: 20px;
-    left: 100px;
+    bottom: 0px;
+    left: 60px;
+    @media (min-width: 400px) {
+        left: 80px;
+    }
+    @media (min-width: 600px) {
+        left: 100px;
+    }
+    @media (min-width: 800px) {
+        left: 120px;
+    }
+    @media (min-width: 1000px) {
+        left: 150px;
+    }
     @media (min-width: $desktop-width) {
-        bottom: -10px;
-        left: -10px;
+        bottom: -15px;
+        left: -15px;
     }
 }
 .explanation__item:nth-child(9) {
@@ -160,7 +245,19 @@
     }
 }
 .explanation__item:nth-child(9) .explanation__item-element {
-    bottom: 100px;
+    bottom: 60px;
+    @media (min-width: 400px) {
+        bottom: 80px;
+    }
+    @media (min-width: 600px) {
+        bottom: 100px;
+    }
+    @media (min-width: 800px) {
+        bottom: 120px;
+    }
+    @media (min-width: 1000px) {
+        bottom: 150px;
+    }
     @media (min-width: $desktop-width) {
         bottom: 250px;
     }
@@ -171,13 +268,31 @@
     z-index: 10;
     @media (min-width: $desktop-width) {
         top: 25%;
+        right: 0%;
     }
 }
 .explanation__item:nth-child(10) .explanation__item-element {
-    bottom: 100px;
-    left: 100px;
+    bottom: 60px;
+    left: 60px;
+    @media (min-width: 400px) {
+        bottom: 80px;
+        left: 80px;
+    }
+    @media (min-width: 600px) {
+        bottom: 100px;
+        left: 100px;
+    }
+    @media (min-width: 800px) {
+        bottom: 120px;
+        left: 120px;
+    }
+    @media (min-width: 1000px) {
+        bottom: 150px;
+        left: 150px;
+    }
     @media (min-width: $desktop-width) {
         bottom: 250px;
+        left: -10px;
     }
 }
 .explanation__item-text {
@@ -187,9 +302,17 @@
     font-size: 6px;
     font-style: normal;
     font-weight: 700;
-    line-height: 80%;
+    line-height: 90%;
     margin: 0 auto 3px auto;
-    width: 80px;
+    width: 100%;
+    @media (min-width: 800px) {
+        width: 100px;
+        font-size: 9px;
+    }
+    @media (min-width: 1000px) {
+        width: 120px;
+        font-size: 11px;
+    }
     @media (min-width: $desktop-width) {
         width: 200px;
         font-size: 16px;
@@ -197,8 +320,33 @@
     }
 }
 .explanation__item-image {
-    width: 100%;
+    width: 50px;
+    height: 30px;
+    margin: 0 3px;
     border-radius: 2px;
+    @media (min-width: 400px) {
+        width: 75px;
+        height: 50px;
+        margin: 0 1px;
+    }
+    @media (min-width: 600px) {
+        width: 90px;
+        height: 70px;
+        margin: 0 3px;
+    }
+    @media (min-width: 800px) {
+        width: 110px;
+        height: 80px;
+    }
+    @media (min-width: 1000px) {
+        width: 140px;
+        height: 100px;
+    }
+    @media (min-width: $desktop-width) {
+        width: 230px;
+        height: 180px;
+        margin: 0 5px;
+    }
 }
 .explanation__item-element {
     left: -10px;
